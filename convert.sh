@@ -24,5 +24,5 @@ do
 	fi
 done
 qcow2_image=$(echo $disk_image | sed 's/.vmdk/.qcow2/')
-qemu-img convert -f vmdk -O qcow2 $disk_image $qcow2_image
-echo $qcow2_image
+qemu-img convert -f vmdk -O qcow2 "$disk_image" "$qcow2_image"
+echo "$qcow2_image"
